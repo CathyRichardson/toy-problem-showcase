@@ -17,7 +17,6 @@ class EvenAndOdd extends Component {
         this.setState({ userInput: event.target.value });
     }
 
-
     handleButtonClick() {
         let inputArray = this.state.userInput.split(",");
         let evenNums = [];

@@ -15,18 +15,20 @@ class Sum extends Component {
     }
 
     handleInput1(event) {
-        this.setState({ number1: event.target.value })
+        let num1 = parseInt(event.target.value)
+        this.setState({ number1: num1 })
     }
 
     handleInput2(event) {
-        this.setState({ number2: event.target.value })
+        let num2 = parseInt(event.target.value)
+        this.setState({ number2: num2 })
     }
 
     handleButtonClick() {
         let num1 = this.state.number1;
         let num2 = this.state.number2;
         let sum = num1 + num2;
-        this.setState({sum: sum})
+        this.setState({ sum: sum })
     }
 
     render() {

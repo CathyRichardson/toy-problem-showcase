@@ -18,15 +18,14 @@ class Palindrome extends Component {
 
     handleButtonClick() {
         let input = this.state.userInput;
-        // if ([...input].forEach() === [...input].reverse()) {
-        //     this.setState({palindrome: true})
-        // }
-        // this.setState({palindrome: false})
-
-        // if( for (let i = input.length - 1; i>= 0; i--) === for (let i = 0; i < input.length; i++) ) {
-        //     this.setState({palindrome: true})
-        // }  
-        // this.setState({palindrome: false})
+        let reverseArray = [...input].reverse();
+        let reverseInput = reverseArray.join("");
+        console.log("input:", input, "reverse:", reverseInput)
+        if (input === reverseInput) {
+            this.setState({ palindrome: "true" })
+        } else {
+            this.setState({ palindrome: "false" })
+        }
     }
 
     render() {
